@@ -1,3 +1,3 @@
-(function($){
-	$("p, strong, em, i, b").hyphenate('en').hyphenate('ru');
-}(jQuery));
+!function($){
+	$("p, p *").hyphenate('en').hyphenate('ru');
+}(jQuery);

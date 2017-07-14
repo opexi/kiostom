@@ -1,1 +1,1 @@
-!function(a){a("p, strong, em, i, b").hyphenate("en").hyphenate("ru")}(jQuery);
+!function(a){a("p, p *").hyphenate("en").hyphenate("ru")}(jQuery);
