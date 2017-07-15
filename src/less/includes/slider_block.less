@@ -1,0 +1,131 @@
+.slider {
+	&-block {
+		position: relative;
+		overflow: hidden;
+		.slider {
+			&-wrapper {
+				height: 100%;
+				width: 100%;
+				position: absolute;
+				top: 0px;
+				bottom: 0px;
+				left: 0px;
+				right: 0px;
+				.slick {
+					&-list {
+						position: relative;
+						height: 100%;
+					}
+					&-track {
+						position: relative;
+						height: 100%;
+					}
+					&-slide {
+						background-repeat: no-repeat;
+						background-position: 50% 50%;
+						background-size: cover;
+					}
+				}
+				> .container {
+					position: absolute;
+					z-index: 500;
+					bottom: 0px;
+					left: 0px;
+					right: 0px;
+					.dots {
+						position: relative;
+						text-align: center;
+						.slick {
+							&-dots {
+								bottom: 8px;
+								li {
+									background-color: rgba(255, 255, 255, .85);
+									border: 1px solid rgba(77, 135, 157, .85);
+									border-radius: 50%;
+									overflow: hidden;
+									transition: all .3s;
+									&:hover, &.slick-active {
+										background-color: rgba(77, 135, 157, .85);
+										border: 1px solid rgba(255, 255, 255, .85);
+									}
+									button {
+										opacity: 0;
+										&:before {
+											content: " ";
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				.slide {
+					position: relative;
+					height: 100%;
+					&-container {
+						max-width: 1200px;
+						position: relative;
+						height: 100%;
+					}
+					&-title {
+						position: absolute;
+						max-width: ~'calc(100% - 470px)';
+						left: 15px;
+						bottom: 95px;
+						p {
+							> span {
+								display: inline-block;
+								padding-right: 18px;
+								padding-left: 18px;
+								&:first-child {
+									background-color: rgba(255, 255,255, .8);
+									color: #4d879d;
+									font-family: 'ElektraPro', sans-serif;
+									font-weight: 700;
+									font-size: 40px;
+									line-height: 1;
+									padding-top: 10px;
+									padding-bottom: 10px;
+									border-top-left-radius: 10px;
+									border-top-right-radius: 10px;
+									border-bottom-right-radius: 10px;
+									@media(max-width: 1199px){
+										font-size: 35px;
+									}
+								}
+								&:last-child {
+									background-color: rgba(77, 135, 157, .8);
+									color: #ffffff;
+									font-family: 'ElektraPro', sans-serif;
+									font-weight: 200;
+									font-size: 28px;
+									border-bottom-right-radius: 10px;
+									border-bottom-left-radius: 10px;
+									line-height: 50px;
+									&:after {
+										content: " ";
+										background-image: data-uri('@{images}bin/right_arrow_title.png');
+										background-position: center center;
+										background-repeat: no-repeat;
+										background-size: 100% 100%;
+										display: inline-block;
+										vertical-align: middle;
+										width: 29px;
+										height: 20px;
+										margin-top: 0;
+										margin-bottom: 0;
+										margin-left: 18px;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		> .container {
+			position: relative;
+		}
+	}
+}
+	

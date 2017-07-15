@@ -1,0 +1,141 @@
+.slider {
+	&-block{
+		.form {
+			&-block {
+				background-repeat: repeat-x;
+				background-color: #2390a7;
+				background-image: data-uri('@{images}bin/fos_bg.png');
+				background-position: center bottom;
+				min-height: 580px;
+				color: white;
+				max-width: 400px;
+				border-radius: 10px;
+				margin-right: 0px;
+				margin-left: auto;
+				margin-top: 40px;
+				margin-bottom: 45px;
+				padding-top: 75px;
+				padding-left: 18px + 9px;
+				padding-right: 18px + 9px;
+				position: relative;
+				@media(max-width: 991px){
+					margin-right: auto;
+				}
+				&-title {
+					margin-top: 0px;
+					font-size: 22px;
+					font-family: 'ElektraPro', sans-serif;
+					font-weight: bold;
+					margin-bottom: 30px;
+				}
+				&:before {
+					content: " ";
+					display: block;
+					width: 40px;
+					height: 40px;
+					background-image: data-uri('@{images}bin/fos_logo_white.png');
+					background-position: center center;
+					background-repeat: no-repeat;
+					background-size: 100% 100%;
+					position: absolute;
+					left: 50%;
+					margin-left: -20px;
+					top: 18px;
+				}
+				&-wrapper {
+					*[class^="col-"], [class*=" col-"] {
+						padding-left: 9px;
+						padding-right: 9px;
+					}
+				}
+			}
+			&-group {
+				> label {
+					display: block;
+					font-family: 'ElektraPro', sans-serif;
+					font-weight: 200;
+					font-size: 10px;
+					> span {
+						display: block;
+						margin-bottom: 10px;
+					}
+				}
+				input {
+					&[type=text],
+					&[type=datetime],
+					&[type=time],
+					&[type=month],
+					&[type=week],
+					&[type=passwors],
+					&[type=email],
+					&[type=number],
+					&[type=tel] {
+						height: 46px;
+					}
+				}
+				select {
+					height: 46px;
+				}
+				textarea {
+					min-height: 90px;
+					resize: vertical;
+				}
+				&.check {
+					margin-bottom: 24px;
+					span, a {
+						font-family: 'ElektraPro', sans-serif;
+						font-size: 10px;
+						color: white;
+					}
+					a {
+						text-decoration: underline;
+						&:hover {
+							color: white;
+						}
+					}
+					> input, > span {
+						display: inline-block;
+						vertical-align: middle;
+						margin-top: 0px;
+						margin-bottom: 0px;
+					}
+					> input {
+						margin-right: 10px;
+					}
+				}
+				&.submit {
+					button,
+					input[type=button],
+					input[type=submit],
+					input[type=reset] {
+						min-width: 220px;
+						font-family: 'ElektraPro', sans-serif;
+						font-size: 11px;
+						text-transform: uppercase;
+						border-radius: 20px;
+						line-height: 23px;
+						transition: all .3s;
+						&, &:focus, &:active {
+							border: 2px solid transparent;
+							background-color: #fff;
+							color: #4d879d;
+							outline: none;
+						}
+						&:before {
+							display: inline-block;
+							vertical-align: middle;
+							margin-right: 10px;
+							margin-top: -1px;
+						}
+						&:hover {
+							border: 2px solid #fff;
+							background-color: #4d879d;
+							color: #fff;
+						}
+					}
+					
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,117 @@
+header {
+	color: #5b6b70;
+	[class^="icokiostom-"], [class*=" icokiostom-"] {
+		font-size: 16px;
+		display: inline-block;
+		vertical-align: middle;
+		color: #0b889f;
+	}
+	.head {
+		height: 95px;
+		background-image: url('@{images}bin/block_bg.png');
+		background-repeat: no-repeat;
+		background-position: top -154px left 40%;
+		position: relative;
+		cursor: default;
+		.user-select(none);
+		@media(max-width: 767px){
+			height: auto;
+			background-position: bottom 110px center;
+		}
+	}
+	.logo {
+		float: left;
+		margin: 13px 0;
+		@media(max-width: 767px){
+			float: none;
+			text-align: center;
+		}
+	}
+	.right-block {
+		float: right;
+		max-height: 94px;
+		@media(max-width: 767px){
+			float: none;
+			text-align: center;
+			margin-bottom: 10px;
+		}
+	}
+	.block {
+		&-separator {
+			float: left;
+			width: 1px;
+			height: 34px;
+			background-color: #d9e8ea;
+			margin: 30px 0;
+		}
+		&-worktime {
+			float: left;
+			margin: 32px 30px;
+			[class^="icokiostom-"], [class*=" icokiostom-"] {
+				vertical-align: top;
+				margin-top: 1px;
+			}
+			span {
+				display: inline-block;
+				color: #5b6b70;
+				font-size: 15px;
+				vertical-align: middle;
+				margin-left: 5px;
+				letter-spacing: 1px;
+			}
+		}
+		&-appointments {
+			float: left;
+			margin: 23px 15px;
+			[class^="icokiostom-"], [class*=" icokiostom-"] {
+				vertical-align: top;
+				margin-right: 5px;
+				margin-top: 1px;
+			}
+			span {
+				display: inline-block;
+				color: #072e37;
+				text-transform: uppercase;
+				font-family: 'ElektraPro';
+				font-size: 10px;
+				vertical-align: middle;
+			}
+			.button {
+				&-appointments {
+					padding: 10px 20px;
+					border-radius: 2px;
+					cursor: pointer;
+					&:hover {
+						background-color: #e6f3f5;
+					}
+				}
+			}
+		}
+		&-phone {
+			text-align: right;
+			margin: 31px 0;
+			float: left;
+		}
+		&-phone, &-appointments, &-separator.visible-xs {
+			@media(max-width: 767px) {
+				float: none;
+				display: inline-block !important;
+				margin: 0 3px;
+				vertical-align: middle;
+			}
+		}
+	}
+	.contact-phone {
+		line-height: 20px;
+		a {
+			&.phone {
+				font-size: 18px;
+				color: #0b889f;
+				font-weight: bold;
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}

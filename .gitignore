@@ -6,3 +6,4 @@ test/**/*
 tests/**/*
 src/images/bin/**/*.*
 src/bin/**/*.*
+bin/**/*.*

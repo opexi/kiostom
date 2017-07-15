@@ -2,7 +2,7 @@ module.exports = function(grunt){
 	var gc = {
 		imageNotyfy: __dirname+'\\src\\notify.png',
 		minifyHtml: false,
-		minifyCss: true
+		minifyCss: false
 	};
 	require('load-grunt-tasks')(grunt);
 	require('time-grunt')(grunt);
@@ -55,7 +55,7 @@ module.exports = function(grunt){
 			css: {
 				files : {
 					'test/css/main.css' : [
-						'src/less/main.less'
+						'src/less/main.less',
 					]
 				},
 				options : {
@@ -131,8 +131,12 @@ module.exports = function(grunt){
 						'bower_components/jqueryui-touch-punch/jquery.ui.touch-punch.js',
 						'bower_components/jquery_lazyload/jquery.lazyload.js',
 						'bower_components/jquery.maskedinput/dist/jquery.maskedinput.js',
-						'bower_components/fancybox/dist/jquery.fancybox.js',
+						'bower_components/fancybox/source/jquery.fancybox.js',
+						'bower_components/fancybox/source/helpers/jquery.fancybox-buttons.js',
+						'bower_components/fancybox/source/helpers/jquery.fancybox-media.js',
+						'bower_components/fancybox/source/helpers/jquery.fancybox-thumbs.js',
 						'bower_components/slick-carousel/slick/slick.js',
+						'bower_components/datetimepicker/jquery.datetimepicker.js'
 						//'bower_components/jarallax/jarallax/jarallax.js',
 						//'bower_components/jarallax/jarallax/jarallax-video.js',
 						//'bower_components/arcticModal/arcticmodal/jquery.arcticmodal.js',

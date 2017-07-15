@@ -1,0 +1,46 @@
+.form-block
+	p.text-uppercase.text-center.form-block-title
+		|Записаться на приём
+		.form-block-wrapper.row
+			.messages
+			form
+				.form-group.col-xs-12
+					label
+						span.text-uppercase
+							|Контактное лицо 
+							span 
+								|*
+						input.form-control(type="text" required placeholder="Представьтесь пожалуйста" name="user_name")
+					
+				.form-group.col-sm-7.col-xs-12
+					label
+						span.text-uppercase
+							|Контактный телефон 
+							span 
+								|*
+						input.form-control(type="text" required placeholder="+7(999)999-99-99" name="user_phone")
+					
+				.form-group.col-sm-5.col-xs-12
+					label
+						span.text-uppercase
+							|Удобная дата
+							span 
+								|*
+						input.form-control(type="text" required placeholder="Дата и время" name="user_date")
+				.form-group.col-xs-12
+					label
+						span.text-uppercase
+							|На что жалуетесь
+						textarea.form-control(name="user_text")
+				.form-group.col-xs-12.text-center.text-uppercase.check
+					input(type="checkbox" name="user_policy" required checked)
+					span Я даю согласие на обработку&nbsp;
+						a(href="/plicy/" target="_blank")
+							|персональных данных 
+						|*
+				.form-group.col-xs-12.text-center.submit
+					button.btn.btn-submit.icokiostom-email(type="submit")
+						|Записаться
+				.form-group.col-xs-12.text-center
+					span
+						|* - Поля обязательные для заполнения

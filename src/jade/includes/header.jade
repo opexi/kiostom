@@ -1,0 +1,37 @@
+.head
+	.container
+		.logo
+			a(href="")
+				img(src="bitrix/templates/frontpage/images/kiostom_logo_blue.png" alt="КИОСТОМ")
+		.right-block
+			.block-separator.hidden-md.hidden-sm.hidden-xs
+			.block-worktime.hidden-md.hidden-sm.hidden-xs
+				i.icokiostom-clock
+				span
+					b Пн-Пт: 
+					|08:30-20:00
+					br
+					b Cб: 
+					|09:00-15:00
+					br
+			.block-separator.hidden-xs
+			.block-appointments
+				.button-appointments.popup(data-fancybox-href="/appointments.ajax" onclick="")
+					i.icokiostom-email
+					span
+						|Записаться
+						br
+						|на прием
+			.block-separator.hidden-sm.hidden-xs
+			.block-appointments
+				.button-appointments.popup.hidden-sm.hidden-xs(data-fancybox-href="/callback.ajax" onclick="")
+					i.icokiostom-phone
+					span 
+						|Заказать звонок 
+			.block-separator.visible-xs
+			.block-phone
+				.contact-phone
+					a.phone(href="tel:+78462477404")
+						span.ya-phone +7 (846) 247-74-04
+				span.addres
+					|Самара, ул.Тухачевского, 88
