@@ -245,11 +245,6 @@ module.exports = function(grunt){
 					'test'
 				]
 			},
-			font: {
-				src: [
-					'docs/bitrix/templates/frontpage/fonts'
-				]
-			}
 		},
 		watch: {
 			options: {
@@ -265,7 +260,7 @@ module.exports = function(grunt){
 				files: [
 					'src/fonts/**/*.*',
 				],
-				tasks: ["clean:font","copy:main","copy:bootstrap","copy:slick","notify:done"]
+				tasks: ["copy:main","copy:bootstrap","copy:slick","notify:done"]
 			},
 			js: {
 				files: [

@@ -1,7 +1,208 @@
 .footer{
-	min-height: 300px;
 	background-color: #4e879d;
-	&, a {
+	padding-top: 25px;
+	border-top: 4px solid #4d7b8c;
+	&,
+	a,
+	.h1,
+	.h2,
+	.h3,
+	.h4,
+	.h5,
+	.h6 {
 		color: #fff;
+	}
+	.h1,
+	.h2,
+	.h3,
+	.h4,
+	.h5,
+	.h6 {
+		font-family: 'GothamPro', sans-serif;
+		font-size: 12px;
+		font-weight: 700;
+	}
+	.line {
+		&:after {
+			content: " ";
+			display: block;
+			height: 2px;
+			background-color: #fff;
+			margin-top: 7px;
+			margin-bottom: 12px;
+		}
+	}
+	.button_wrap {
+		text-align: left;
+		margin-top: 30px;
+		.mail {
+			margin-bottom: 15px;
+		}
+		@media(max-width: 991px){
+			.mail {
+				text-align: right;
+				margin-bottom: 0px;
+			}
+			.phone {
+				text-align: left;
+			}
+			margin-bottom: 30px;
+		}
+		@media(max-width: 767px){
+			.mail, .phone {
+				text-align: center;
+			}
+			.mail {
+				margin-bottom: 30px;
+			}
+		}
+	}
+	button {
+		&.btn {
+			width: 100%;
+			max-width: 210px;
+		}
+	}
+	ul {
+		&.menu {
+			padding-left: 0px;
+			font-family: 'GothamPro', sans-serif;
+			font-size: 12px;
+			> li {
+				list-style: none;
+				+ li {
+					margin-top: 10px;
+				}
+				a {
+					display: block;
+					&:hover {
+						color: #fff;
+					}
+				}
+			}
+			@media(max-width: 767px){
+				margin-bottom: 30px;
+			}
+		}
+		&.contacts {
+			padding-left: 0px;
+			margin-bottom: 0px;
+			font-family: 'GothamPro', sans-serif;
+			font-size: 12px;
+			> li {
+				position: relative;
+				padding-left: 18px;
+				list-style: none;
+				position: relative;
+				+ li {
+					margin-top: 10px;
+				}
+				&:before {
+					position: absolute;
+					top: 50%;
+					left: 0px;
+					color: white;
+					margin-top: -6px;
+					font-family: 'KiostomRu' !important;
+					speak: none;
+					font-style: normal;
+					font-weight: normal;
+					font-variant: normal;
+					text-transform: none;
+					line-height: 1;
+					-webkit-font-smoothing: antialiased;
+					-moz-osx-font-smoothing: grayscale;
+				}
+				&.addres {
+					&:before {
+						content: @icokiostom-addres;
+					}
+				}
+				&.tel {
+					&:before {
+						content: @icokiostom-phone;
+					}
+				}
+				&.mail {
+					&:before {
+						content: @icokiostom-email;
+					}
+				}
+			}
+		}
+	}
+	&_row {
+		.logo {
+			margin-left: 0px;
+			margin-right: auto;
+			display: block;
+			@media(max-width: 991px){
+				margin-left: auto;
+			}
+		}
+		&:after {
+			display: block;
+			content: " ";
+			border-top: 4px solid #4d7b8c;
+			height: 0px;
+			margin-top: 10px;
+			margin-bottom: 0px;
+		}
+	}
+	@media(max-width:767px){
+		.col-xs-6:nth-child(2n + 1) {
+			clear:both;
+		}
+	}
+	&-bottom {
+		.social {
+			text-align: right;
+			span, ul {
+				display: inline-block;
+				vertical-align: middle;
+			}
+			ul {
+				list-style: none;
+				padding-left: 0px;
+				margin-bottom: 0px;
+				line-height: 0px;
+				.clearfix();
+				> li {
+					float: left;
+					+ li {
+						margin-left: 5px;
+					}
+					a {
+						display: block;
+						transition: all .3s;
+						&, &:hover, &:focus, &:active {
+							outline: 0;
+							text-decoration: none;
+						}
+						img {
+							display: block;
+							width: 18px;
+							transition: all .3s;
+						}
+						&:hover {
+							img {
+								box-shadow: 0px 0px 1px #fff;
+							}
+						}
+					}
+				}
+			}
+		}
+		.copyright {
+			text-align: left;
+		}
+		@media(max-width: 767px){
+			.social, .copyright {
+				text-align: center;
+			}
+			.copyright {
+				padding-top: 0px;
+			}
+		}
 	}
 }
