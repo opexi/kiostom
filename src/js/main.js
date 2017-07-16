@@ -13,11 +13,9 @@
 /* slider */
 !function($){
 	var $slider = $('.slider-block .slider-wrapper'),
-		$dotsWrapper = $(".container .dots", $slider);
-	/*Slider.on('init', function(slick){
-        var dots = $(slick.target).find('> .slick-dots');
-        dots.appendTo( $(slick.target).find('.dots') );
-    });*/
+		$dotsWrapper = $(".container .dots", $slider),
+		$newsSlider = $(".news_actions .slider");
+		$dotsNewsSlider = $(".news_actions .slider_dots .dots");
 	$slider.slick({
         slide: '.slide',
         infinite: true,
@@ -40,4 +38,46 @@
 			}
 		]
     });
+	$newsSlider.slick({
+        slide: '.slider-item',
+        infinite: true,
+        arrows: false,
+        dots: true,
+        cssEase: 'ease',
+        fade: false,
+		slidesToShow: 3,
+		slidesToScroll: 3,
+		autoplay: false,
+		appendDots: $dotsNewsSlider,
+		responsive: [
+			{
+				breakpoint: 1250,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 2,
+				}
+			},
+			{
+				breakpoint: 875,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+				}
+			}
+		]
+	});
+}(jQuery);
+/* slider */
+!function($){
+	$(".rotated").on("mouseenter click", function(){
+		var $this = $(this);
+		$(".rotated").each(function(){
+			if($(this) != $this){
+				$(this).removeClass("hover");
+			}
+		})
+		$(this).addClass("hover");
+	}).on("mouseleave", function(){
+		$(".rotated").removeClass("hover");
+	});
 }(jQuery);

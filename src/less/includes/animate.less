@@ -1,0 +1,54 @@
+@keyframes flipInY {
+	from {
+		transform: perspective(400px) rotate3d(0, 1, 0, 180deg);
+		z-index: 10;
+		visibility: hidden;
+	}
+	25% {
+		transform: perspective(400px) rotate3d(0, 1, 0, 135deg);
+		z-index: 10; 
+		visibility: hidden;
+	}
+	50% {
+		transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+		z-index: 15;
+		visibility: visible;
+	}
+	75% {
+		transform: perspective(400px) rotate3d(0, 1, 0, 45deg);
+		z-index: 20;
+		visibility: visible;
+	}
+	to {
+		transform: perspective(400px) rotate3d(0, 1, 0, 0deg);
+		z-index: 20;
+		visibility: visible;
+	}
+}
+@keyframes flipOutY {
+	from {
+		transform: perspective(400px) rotate3d(0, 1, 0, 0deg);
+		z-index: 20;
+		visibility: visible;
+	}
+	25% {
+		transform: perspective(400px) rotate3d(0, 1, 0, -45deg);
+		z-index: 20;
+		visibility: visible;
+	}
+	50% {
+		transform: perspective(400px) rotate3d(0, 1, 0, -90deg);
+		z-index: 15;
+		visibility: hidden;
+	}
+	75% {
+		transform: perspective(400px) rotate3d(0, 1, 0, -135deg);
+		z-index: 10; 
+		visibility: hidden;
+	}
+	to {
+		transform: perspective(400px) rotate3d(0, 1, 0, -180deg);
+		z-index: 10;
+		visibility: hidden;
+	}
+}
