@@ -14,8 +14,12 @@
 !function($){
 	var $slider = $('.slider-block .slider-wrapper'),
 		$dotsWrapper = $(".container .dots", $slider),
-		$newsSlider = $(".news_actions .slider");
-		$dotsNewsSlider = $(".news_actions .slider_dots .dots");
+		$newsSlider = $(".news_actions .slider"),
+		$dotsNewsSlider = $(".news_actions .slider_dots .dots"),
+		$arrowsNewsSlider = $(".news_actions .slider_arrows .arrows"),
+		$prevArrow = $("<span class=\"prev\"></span>"),
+		$nextArrow = $("<span class=\"next\"></span>");
+	$arrowsNewsSlider.append($prevArrow).append($nextArrow);
 	$slider.slick({
         slide: '.slide',
         infinite: true,
@@ -41,27 +45,30 @@
 	$newsSlider.slick({
         slide: '.slider-item',
         infinite: true,
-        arrows: false,
+        arrows: true,
         dots: true,
-        cssEase: 'ease',
-        fade: false,
 		slidesToShow: 3,
 		slidesToScroll: 3,
 		autoplay: false,
 		appendDots: $dotsNewsSlider,
+		appendArrows: $arrowsNewsSlider,
+		prevArrow: $prevArrow,
+		nextArrow: $nextArrow,
 		responsive: [
 			{
-				breakpoint: 1250,
+				breakpoint: 1280,
 				settings: {
 					slidesToShow: 2,
 					slidesToScroll: 2,
+					arrows: true,
 				}
 			},
 			{
-				breakpoint: 875,
+				breakpoint: 1030,
 				settings: {
 					slidesToShow: 1,
 					slidesToScroll: 1,
+					arrows: true,
 				}
 			}
 		]
