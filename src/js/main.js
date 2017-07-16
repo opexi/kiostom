@@ -88,3 +88,19 @@
 		$(".rotated").removeClass("hover");
 	});
 }(jQuery);
+!function($){
+	$('a[rel="cert"]').fancybox({
+		padding: 0,
+		wrapCSS: '-fancybox-custom',
+		type: 'image',
+		helpers: {
+			overlay: {
+				locked: false
+			},
+			thumbs: {
+				width: 50,
+				height: 50
+			}
+		}
+	});
+}(jQuery);

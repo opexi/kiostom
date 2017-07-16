@@ -1,7 +1,7 @@
 html, body {
 	font-family: 'Arial', serif;
 	font-size: 13px;
-	color: #072e37;
+	color: #606b6f;//#072e37;
 	height: 100%;
 }
 a {
@@ -18,6 +18,95 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	font-family: ElektraPro, Arial, sans-serif;
 	font-weight: 700;
 }
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    color: #040405;
+    font-family: 'ElektraPro';
+}
+.h1 {
+	width: 79%;
+    font-size: 50px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 46px;
+    margin-bottom: 20px;
+}
+.h2 {
+    font-size: 34px;
+    font-weight: bold;
+    color: #072e37;
+    letter-spacing: 1px;
+}
+.h3 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #072e37;
+    text-transform: uppercase;
+}
+.h4 {
+    font-size: 20px;
+    font-weight: 500;
+}
+.h5 {
+    font-size: 10px;
+    font-family: 'Arial';
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #072e37;
+}
 img {
 	max-width: 100%;
+}
+blockquote {
+	color: #5b6b70;
+	font-style: italic;
+	padding: 0;
+	font-size: 18px;
+	position: relative;
+	border-left: none;
+	margin-bottom: 25px;
+	&:after {
+		content: ' ';
+		display: block;
+		max-width: 105px;
+		height: 3px;
+		background: #0b889f;
+		margin-top: 20px;
+	}
+}
+ul, ol {
+	&.colored {
+		padding-left: 22px;
+		counter-reset: item;
+		> li {
+			list-style: none;
+			position: relative;
+			+ li {
+				margin-top: 10px;
+			}
+		}
+	}
+}
+ul {
+	&.colored {
+		> li {
+			&:before {
+				font-family: 'KiostomRu';
+				content: @icokiostom-circle;
+				width: 8px;
+				height: 8px;
+				left: -17px;
+				top: -1px;
+				color: #0f5fa1;
+				display: block;
+				position: absolute;
+				font-size: 7px;
+				line-height: 18px;
+			}
+		}
+	}
 }

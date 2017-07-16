@@ -1,0 +1,55 @@
+.main_page {
+	.about {
+		margin-bottom: 30px;
+		.h2 {
+			margin-top: 40px;
+			margin-bottom: 10px;
+		}
+		&-title {
+			&-line {
+				&:after {
+					content: ' ';
+					display: block;
+					height: 3px;
+					background: #0b889f;
+					margin-top:  5px;
+				}
+			}
+		}
+		.tizers {
+			margin-bottom: 30px;
+			.tizer {
+				padding-top: 20px;
+				> p {
+					> strong {
+						display: block;
+						font-size: 50px;
+						font-family: ElektraPro, sans-serif;
+						font-weight: 700;
+						line-height: 50px;
+						color: #1e3239;
+						@media(max-width: 767px){
+							text-align: center;
+						}
+					}
+					> span {
+						display: block;
+						color: #fff;
+						background-color: #4d879d;
+						border-radius: 10px;
+						padding: 9px;
+						font-size: 16px;
+						font-family: ElektraPro;
+						font-weight: 400;
+						@media(max-width: 991px){
+							max-width: 300px;
+						}
+						@media(max-width: 767px){
+							.center-block();
+						}
+					}
+				}
+			}
+		}
+	}
+}

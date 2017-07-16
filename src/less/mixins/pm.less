@@ -8,3 +8,13 @@
 	}
 	.loop(0);
 }
+.make-fs(@end: 60){
+	.loop(@counter) when (@counter <= @end) {
+		@class: ~".fs-@{counter}";
+		@{class}{
+			font-size: 1px * @counter;
+		}
+		.loop((@counter + 1));
+	}
+	.loop(10);
+}
