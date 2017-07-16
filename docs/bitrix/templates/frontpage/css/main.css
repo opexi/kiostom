@@ -9842,6 +9842,9 @@ header .contact-phone a.phone:hover {
   margin-bottom: 40px;
   color: #fff;
 }
+.main_page .news_actions .slick-list {
+  border-radius: 10px;
+}
 .main_page .news_actions .slick-dots {
   bottom: auto;
   top: 15px;
@@ -10078,4 +10081,12 @@ header .contact-phone a.phone:hover {
   font-family: Arial, sans-serif;
   font-size: 14px;
   color: black;
+}
+.footer {
+  min-height: 300px;
+  background-color: #4e879d;
+}
+.footer,
+.footer a {
+  color: #fff;
 }
