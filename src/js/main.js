@@ -18,8 +18,13 @@
 		$dotsNewsSlider = $(".news_actions .slider_dots .dots"),
 		$arrowsNewsSlider = $(".news_actions .slider_arrows .arrows"),
 		$prevArrow = $("<span class=\"prev\"></span>"),
-		$nextArrow = $("<span class=\"next\"></span>");
+		$nextArrow = $("<span class=\"next\"></span>"),
+		$reviewSlider = $(".about .slider"),
+		$reviewArrows = $(".about .slider_arrows .arrows"),
+		$prevRewArrow = $prevArrow.clone(),
+		$nextRewArrow = $nextArrow.clone();
 	$arrowsNewsSlider.append($prevArrow).append($nextArrow);
+	$reviewArrows.append($prevRewArrow).append($nextRewArrow);
 	$slider.slick({
         slide: '.slide',
         infinite: true,
@@ -73,6 +78,20 @@
 			}
 		]
 	});
+	$reviewSlider.slick({
+        slide: '.slider-item',
+        infinite: true,
+        arrows: true,
+        dots: false,
+        cssEase: 'ease',
+        fade: false,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		autoplay: false,
+		appendArrows: $reviewArrows,
+		prevArrow: $prevRewArrow,
+		nextArrow: $nextRewArrow,
+    });
 }(jQuery);
 /* slider */
 !function($){
@@ -111,8 +130,13 @@
 		VK.Widgets.Group("vk_groups", {mode: 3, width: "auto"}, 138987061);
 		$(window).on("resize", function(e){
 			$groups.css({width:"100%"});
-			$("iframe", $groups).css({width:"100%"});
-			$("iframe", $groups).trigger("resize");
+			var $iframe = $("iframe", $groups);
+			if($iframe.length){
+				var src = $iframe[0].src;
+				$iframe.css({width:"100%"});
+				$iframe[0].src="";
+				$iframe[0].src=src;
+			}
 		}).trigger("resize");
 	}
 }(jQuery);
