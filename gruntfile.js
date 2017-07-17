@@ -216,6 +216,23 @@ module.exports = function(grunt){
 						ext: '.html'
 					}
 				]
+			},
+			tpls: {
+				options: {
+					pretty: !gc.minifyHtml,
+					data: {
+						debug: false
+					}
+				},
+				files: [
+					{
+						expand: true,
+						cwd: 'src/jade/includes',
+						src: ['*.jade'],
+						dest: 'tpl',
+						ext: '.html'
+					}
+				]
 			}
 		},
 		copy: {
