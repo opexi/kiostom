@@ -116,6 +116,7 @@ module.exports = function(grunt){
 			main: {
 				files: {
 					'docs/bitrix/templates/frontpage/js/main.js': [
+						'src/js/df.js',
 						'src/js/main.js'
 					]
 				}
@@ -123,7 +124,6 @@ module.exports = function(grunt){
 			app: {
 				files: {
 					'docs/bitrix/templates/frontpage/js/app.js' : [
-						//'src/js/utilites.js',
 						'bower_components/jquery/dist/jquery.js',
 						'bower_components/bootstrap/dist/js/bootstrap.js',
 						//'test/js/jquery.custom-ui.js',
@@ -136,8 +136,6 @@ module.exports = function(grunt){
 						'bower_components/fancybox/source/helpers/jquery.fancybox-media.js',
 						'bower_components/fancybox/source/helpers/jquery.fancybox-thumbs.js',
 						'bower_components/slick-carousel/slick/slick.js',
-						//'bower_components/datetimepicker/build/jquery.datetimepicker.full.js',
-						//'bower_components/datetimepicker/jquery.datetimepicker.js'
 						//'bower_components/jarallax/jarallax/jarallax.js',
 						//'bower_components/jarallax/jarallax/jarallax-video.js',
 						//'bower_components/arcticModal/arcticmodal/jquery.arcticmodal.js',

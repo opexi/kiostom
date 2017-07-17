@@ -134,3 +134,11 @@
 		}).trigger("resize");
 	}
 }(jQuery);
+!function($){
+	$('input[placeholder="+7(999)999-99-99"]').mask("+7(999)999-99-99");
+	$("[name=user_date]").datetimepicker({
+        lang:'ru',
+        minDate:0,
+        format:'j.m.Y h:i'
+    });
+}(jQuery);
