@@ -125,18 +125,12 @@
 }(jQuery);
 /* VK */
 !function($){
-	if($("#vk_groups").length){
-		var $groups = $("#vk_groups");
-		VK.Widgets.Group("vk_groups", {mode: 3, width: "auto"}, 138987061);
+	var $groups = $("#vk_groups");
+	if($groups.length){
+		//VK.Widgets.Group("vk_groups", {mode: 3, width: "auto"}, 138987061);
 		$(window).on("resize", function(e){
-			$groups.css({width:"100%"});
-			var $iframe = $("iframe", $groups);
-			if($iframe.length){
-				var src = $iframe[0].src;
-				$iframe.css({width:"100%"});
-				$iframe[0].src="";
-				$iframe[0].src=src;
-			}
+			$groups.removeAttr("style").empty();
+			VK.Widgets.Group("vk_groups", {mode: 3, width: "auto"}, 138987061);
 		}).trigger("resize");
 	}
 }(jQuery);
