@@ -104,3 +104,15 @@
 		}
 	});
 }(jQuery);
+/* VK */
+!function($){
+	if($("#vk_groups").length){
+		var $groups = $("#vk_groups");
+		VK.Widgets.Group("vk_groups", {mode: 3, width: "auto"}, 138987061);
+		$(window).on("resize", function(e){
+			$groups.css({width:"100%"});
+			$("iframe", $groups).css({width:"100%"});
+			$("iframe", $groups).trigger("resize");
+		}).trigger("resize");
+	}
+}(jQuery);

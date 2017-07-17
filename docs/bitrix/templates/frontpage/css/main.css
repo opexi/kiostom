@@ -7407,6 +7407,11 @@ ul.colored > li:before {
     float: none;
   }
 }
+#vk_groups {
+  width: 100% !important;
+  position: relative;
+  overflow: hidden;
+}
 .mt-0 {
   margin-top: 0px;
 }
@@ -10070,6 +10075,93 @@ header .contact-phone a.phone:hover {
     margin-left: auto;
     margin-right: auto;
   }
+}
+.main_page .about .reviews {
+  position: relative;
+  max-width: 376px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 30px;
+  padding-bottom: 55px;
+  border: 1px solid #dfdfdf;
+  background-color: #f4f4f4;
+  margin-bottom: 20px;
+}
+.main_page .about .reviews_slider {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  border-bottom: 1px dashed #dfdfdf;
+}
+.main_page .about .reviews .slider-item blockquote {
+  color: #487d9c;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  margin-bottom: 8px;
+}
+.main_page .about .reviews .slider-item blockquote:after {
+  display: none;
+}
+.main_page .about .reviews .slider-item blockquote .h4 {
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  color: #1e3239;
+  font-weight: 700;
+  margin-top: 0px;
+}
+.main_page .about .reviews .slider-item blockquote .data {
+  font-size: 16px;
+}
+.main_page .about .reviews .slider-item blockquote .avatar {
+  position: relative;
+  width: 76px;
+}
+.main_page .about .reviews .slider-item blockquote .avatar img {
+  margin-left: 5px;
+}
+.main_page .about .reviews .slider-item blockquote .avatar:before {
+  position: absolute;
+  display: block;
+  background-color: #4d879d;
+  color: white;
+  font-size: 16px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  line-height: 36px;
+  text-align: center;
+  bottom: 0px;
+  left: 0px;
+}
+.main_page .about .reviews .slider_arrows {
+  position: relative;
+}
+.main_page .about .reviews .slider_arrows > a {
+  display: inline-block;
+  margin-top: 15px;
+  word-wrap: none;
+}
+.main_page .about .reviews .slider_arrows > a,
+.main_page .about .reviews .slider_arrows > a:hover,
+.main_page .about .reviews .slider_arrows > a:focus {
+  outline: 0;
+  text-decoration: none;
+}
+.main_page .about .reviews .slider_arrows > a > span {
+  font-family: ElektraPro;
+  font-weight: 200;
+  font-size: 12px;
+}
+.main_page .about .reviews .slider_arrows > a > i {
+  font-size: 8px;
+  color: #4d869c;
+  margin-top: -1px;
+  margin-right: 8px;
+}
+.main_page .about .reviews .slider_arrows > a > span,
+.main_page .about .reviews .slider_arrows > a > i {
+  display: inline-block;
+  vertical-align: middle;
 }
 .main_page .sertificats {
   background-image: url('../images/sertificats_bg.jpg');
