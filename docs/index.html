@@ -13,16 +13,16 @@
     <meta property="og:url" content="">
     <meta property="og:type" content="website">
     <meta property="og:image" content="">
-    <link type="text/css" rel="stylesheet" href="bitrix/templates/frontpage/css/main.css">
-    <script type="text/javascript" src="bitrix/templates/frontpage/js/app.js"></script>
-    <script type="text/javascript" src="bitrix/templates/frontpage/js/hypher.js"></script>
+    <link type="text/css" rel="stylesheet" href="bitrix/templates/front/css/main.css">
+    <script type="text/javascript" src="bitrix/templates/front/js/app.js"></script>
+    <script type="text/javascript" src="bitrix/templates/front/js/hypher.js"></script>
   </head>
   <body class="main_page">
     <div class="main_wrapper">
       <header>
         <div class="head">
           <div class="container">
-            <div class="logo"><a href=""><img src="bitrix/templates/frontpage/images/kiostom_logo_blue.png" alt="КИОСТОМ"></a></div>
+            <div class="logo"><a href=""><img src="bitrix/templates/front/images/kiostom_logo_blue.png" alt="КИОСТОМ"></a></div>
             <div class="right-block">
               <div class="block-separator hidden-md hidden-sm hidden-xs"></div>
               <div class="block-worktime hidden-md hidden-sm hidden-xs"><i class="icokiostom-clock"></i><span><b>Пн-Пт: </b>08:30-20:00<br><b>Cб: </b>09:00-15:00<br></span></div>
@@ -49,34 +49,75 @@
               <div class="menu-icon"><span class="line"></span><span class="line"></span><span class="line"></span></div><span>Меню</span>
             </div>
             <menu>
-              <li><a href="javascript:;" class="with-submenu"><span>О клинике </span><i class="icokiostom-down hidden-xs"></i></a>
+              <li><a href="/o-klinike/" class="with-submenu"><span>О клинике</span><i class="icokiostom-down hidden-xs"></i></a>
                 <ul class="submenu">
-                  <li><a href="javascript:;"><span>Команда</span></a></li>
-                  <li><a href="javascript:;"><span>Расписание</span></a></li>
-                  <li><a href="javascript:;"><span>Наши работы</span></a></li>
-                  <li><a href="javascript:;"><span>Новости</span></a></li>
-                  <li><a href="javascript:;"><span>Статьи</span></a></li>
-                  <li><a href="javascript:;"><span>Акции</span></a></li>
-                  <li><a href="javascript:;"><span>Органы исполнительной власти</span></a></li>
-                  <li><a href="javascript:;"><span>Отзывы</span></a></li>
-                  <li><a href="javascript:;"><span>Privacy Policy</span></a></li>
+                  <li><a href="/doctors/">Команда</a></li>
+                  <li><a href="/schedule/">Расписание</a></li>
+                  <li><a href="/work/">Наши работы</a></li>
+                  <li><a href="/news/">Новости</a></li>
+                  <li><a href="/stati-po-stomatologii/">Статьи</a></li>
+                  <li><a href="/action/">Акции</a></li>
+                  <li><a href="/organy-ispolnitelnoy-vlasti/">Органы исполнительной власти</a></li>
+                  <li><a href="/reviews/">Отзывы</a></li>
+                  <li><a href="/privacy-policy/">Privacy Policy</a></li>
                 </ul>
               </li>
-              <li><a href="javascript:;"><span>Контакты</span></a></li>
+              <li><a href="/doctors/" class="with-submenu"><span>Команда</span><i class="icokiostom-down hidden-xs"></i></a>
+                <ul class="submenu">
+                  <li><a href="/schedule/">Расписание</a></li>
+                </ul>
+              </li>
+              <li><a href="/work/"><span>Наши работы</span></a></li>
+              <li><a href="/services/" class="with-submenu"><span>Услуги</span><i class="icokiostom-down hidden-xs"></i></a>
+                <ul class="submenu">
+                  <li><a href="/services/protezirovanie/">протезирование</a></li>
+                  <li><a href="/services/implantation/">имплантация</a></li>
+                  <li><a href="/services/surgery/">хирургия</a></li>
+                  <li><a href="/services/lecheniye-zubov/">лечение</a></li>
+                  <li><a href="/services/whitening/">отбеливание</a></li>
+                </ul>
+              </li>
+              <li><a href="/services/protezirovanie/" class="with-submenu"><span>Протезирование</span><i class="icokiostom-down hidden-xs"></i></a>
+                <ul class="submenu">
+                  <li><a href="/services/protezirovanie/viniry">Виниры</a></li>
+                  <li><a href="/services/protezirovanie/zubnye-koronki/">Коронки</a></li>
+                  <li><a href="/services/protezirovanie/zubnye-mosty/">Мостовидные протезы</a></li>
+                  <li><a href="/services/protezirovanie/zubnye-vkladki/">Вкладки</a></li>
+                  <li><a href="/services/protezirovanie/semnoe-protezirovanie">Съемное протезирование</a></li>
+                  <li><a href="/services/protezirovanie/byugelnoe-protezirovanie">Бюгельное протезирование</a></li>
+                  <li><a href="/services/protezirovanie/protezirovanie-na-implantatah/">Протезирование на имплантатах</a></li>
+                </ul>
+              </li>
+              <li><a href="/services/implantation/" class="with-submenu"><span>Имплантация</span><i class="icokiostom-down hidden-xs"></i></a>
+                <ul class="submenu">
+                  <li><a href="/services/implantation/odnomomentnaya-implantaciya-zubov">Одномоментная имплантация зубов</a></li>
+                  <li><a href="/services/implantation/implantaciya-All-on-4">Имплантация All-on-4</a></li>
+                  <li><a href="/services/implantation/sistemy-implantacii">Системы имплантации</a></li>
+                  <li><a href="/services/implantation/narashhivanie-kostnoj-tkani/">Наращивание костной ткани</a></li>
+                </ul>
+              </li>
+              <li><a href="/price/" class="with-submenu"><span>Цены</span><i class="icokiostom-down hidden-xs"></i></a>
+                <ul class="submenu">
+                  <li><a href="/ceni-na-lechenie-zubov/">Терапия</a></li>
+                  <li><a href="/ceni-na-implantaciu-i-hirurgiu/">Хирургия</a></li>
+                  <li><a href="/ceni-na-protezirovanie/">Ортопедия</a></li>
+                </ul>
+              </li>
+              <li><a href="/contacts/"><span>Контакты</span></a></li>
             </menu>
           </div>
         </div>
       </header>
       <div class="slider-block">
         <div class="slider-wrapper">
-          <div style="background-image: url('bitrix/templates/frontpage/images/bn_item_01.jpg');" class="slide item">
+          <div style="background-image: url('bitrix/templates/front/images/bn_item_01.jpg');" class="slide item">
             <div class="slide-container center-block">
               <div class="slide-title col-md-7 hidden-sm hidden-xs">
                 <p><span>А ваша улыбка готова к лету?</span><span>Запишись на прием сегодня</span></p>
               </div>
             </div>
           </div>
-          <div style="background-image: url('bitrix/templates/frontpage/images/bn_item_01.jpg');" class="slide item">
+          <div style="background-image: url('bitrix/templates/front/images/bn_item_01.jpg');" class="slide item">
             <div class="slide-container center-block">
               <div class="slide-title col-md-7 hidden-sm hidden-xs">
                 <p><span>Не успел записаться вчера?</span><span>Запишись на прием сегодня</span></p>
@@ -146,7 +187,7 @@
             <div class="container-items text-center">
               <div class="rotated">
                 <div class="item">
-                  <div class="top text-uppercase"><img src="bitrix/templates/frontpage/images/protezirovanie.png" alt="ПРОТЕЗИРОВАНИЕ"></div>
+                  <div class="top text-uppercase"><img src="bitrix/templates/front/images/protezirovanie.png" alt="ПРОТЕЗИРОВАНИЕ"></div>
                   <div class="bottom">
                     <ul>
                       <li><a href="javascript:;">Menu item</a></li>
@@ -164,7 +205,7 @@
               </div>
               <div class="rotated">
                 <div class="item">
-                  <div class="top text-uppercase"><img src="bitrix/templates/frontpage/images/implantacia.png" alt="ИМПЛАНТАЦИЯ"></div>
+                  <div class="top text-uppercase"><img src="bitrix/templates/front/images/implantacia.png" alt="ИМПЛАНТАЦИЯ"></div>
                   <div class="bottom">
                     <ul>
                       <li><a href="javascript:;">Menu item</a></li>
@@ -182,7 +223,7 @@
               </div>
               <div class="rotated">
                 <div class="item">
-                  <div class="top text-uppercase"><img src="bitrix/templates/frontpage/images/hirurgia.png" alt="ХИРУРГИЧЕСКАЯ СТАМОТОЛОГИЯ"></div>
+                  <div class="top text-uppercase"><img src="bitrix/templates/front/images/hirurgia.png" alt="ХИРУРГИЧЕСКАЯ СТАМОТОЛОГИЯ"></div>
                   <div class="bottom">
                     <ul>
                       <li><a href="javascript:;">Menu item</a></li>
@@ -200,7 +241,7 @@
               </div>
               <div class="rotated">
                 <div class="item">
-                  <div class="top text-uppercase"><img src="bitrix/templates/frontpage/images/lechenie_zubov.png" alt="ЛЕЧЕНИЕ ЗУБОВ"></div>
+                  <div class="top text-uppercase"><img src="bitrix/templates/front/images/lechenie_zubov.png" alt="ЛЕЧЕНИЕ ЗУБОВ"></div>
                   <div class="bottom">
                     <ul>
                       <li><a href="javascript:;">Menu item</a></li>
@@ -218,7 +259,7 @@
               </div>
               <div class="rotated">
                 <div class="item">
-                  <div class="top text-uppercase"><img src="bitrix/templates/frontpage/images/otbelivanie.png" alt="ОТБЕЛИВАНИЕ"></div>
+                  <div class="top text-uppercase"><img src="bitrix/templates/front/images/otbelivanie.png" alt="ОТБЕЛИВАНИЕ"></div>
                   <div class="bottom">
                     <ul>
                       <li><a href="javascript:;">Menu item</a></li>
@@ -248,7 +289,7 @@
               </div>
               <div class="slider">
                 <div class="slider-item">
-                  <div class="slider-item-wrapper"><a href="javascript:;"><img src="bitrix/templates/frontpage/images/item_news.jpg" alt="title news actions"></a>
+                  <div class="slider-item-wrapper"><a href="javascript:;"><img src="bitrix/templates/front/images/item_news.jpg" alt="title news actions"></a>
                     <div class="content">
                       <h6 class="title"><a href="javascript:;">Самый активный участник</a></h6>
                       <div class="description">
@@ -258,7 +299,7 @@
                   </div>
                 </div>
                 <div class="slider-item">
-                  <div class="slider-item-wrapper"><a href="javascript:;"><img src="bitrix/templates/frontpage/images/item_news.jpg" alt="title news actions"></a>
+                  <div class="slider-item-wrapper"><a href="javascript:;"><img src="bitrix/templates/front/images/item_news.jpg" alt="title news actions"></a>
                     <div class="content">
                       <h6 class="title"><a href="javascript:;">Самый активный участник</a></h6>
                       <div class="description">
@@ -268,7 +309,7 @@
                   </div>
                 </div>
                 <div class="slider-item">
-                  <div class="slider-item-wrapper"><a href="javascript:;"><img src="bitrix/templates/frontpage/images/item_news.jpg" alt="title news actions"></a>
+                  <div class="slider-item-wrapper"><a href="javascript:;"><img src="bitrix/templates/front/images/item_news.jpg" alt="title news actions"></a>
                     <div class="content">
                       <h6 class="title"><a href="javascript:;">Самый активный участник</a></h6>
                       <div class="description">
@@ -278,7 +319,7 @@
                   </div>
                 </div>
                 <div class="slider-item">
-                  <div class="slider-item-wrapper"><a href="javascript:;"><img src="bitrix/templates/frontpage/images/item_news.jpg" alt="title news actions"></a>
+                  <div class="slider-item-wrapper"><a href="javascript:;"><img src="bitrix/templates/front/images/item_news.jpg" alt="title news actions"></a>
                     <div class="content">
                       <h6 class="title"><a href="javascript:;">Самый активный участник</a></h6>
                       <div class="description">
@@ -288,7 +329,7 @@
                   </div>
                 </div>
                 <div class="slider-item">
-                  <div class="slider-item-wrapper"><a href="javascript:;"><img src="bitrix/templates/frontpage/images/item_news.jpg" alt="title news actions"></a>
+                  <div class="slider-item-wrapper"><a href="javascript:;"><img src="bitrix/templates/front/images/item_news.jpg" alt="title news actions"></a>
                     <div class="content">
                       <h6 class="title"><a href="javascript:;">Самый активный участник</a></h6>
                       <div class="description">
@@ -298,7 +339,7 @@
                   </div>
                 </div>
                 <div class="slider-item">
-                  <div class="slider-item-wrapper"><a href="javascript:;"><img src="bitrix/templates/frontpage/images/item_news.jpg" alt="title news actions"></a>
+                  <div class="slider-item-wrapper"><a href="javascript:;"><img src="bitrix/templates/front/images/item_news.jpg" alt="title news actions"></a>
                     <div class="content">
                       <h6 class="title"><a href="javascript:;">Самый активный участник</a></h6>
                       <div class="description">
@@ -374,7 +415,7 @@
                               <p class="h4">Румия Данировна</p>
                               <p class="review">За свою блистательную и красивую улыбку благодарна замечательному доктору-гигиенисту Саклаковой Вере Сергеевне. Еще ни в одной клинике так тщательно мне зубы не чистили. Вера Сергеевна потратила больее часа времени, но  все прошло безболезненно и комфортно. Результатом профгигиены я очень довольна. Спасибо за ваш индивидуальный подход и профессионализм!<br>(Нафигина Р.Д. 09.11.2015.)</p>
                               <p class="data text-right">11.09 2016г.</p>
-                              <div class="avatar icokiostom-comment"><img src="bitrix/templates/frontpage/images/review_avatar.jpg" alt="" class="img-circle"></div>
+                              <div class="avatar icokiostom-comment"><img src="bitrix/templates/front/images/review_avatar.jpg" alt="" class="img-circle"></div>
                             </blockquote>
                           </div>
                           <div class="slider-item">
@@ -382,7 +423,7 @@
                               <p class="h4">Ольга Антоновна</p>
                               <p class="review">Я, Акимова Ольга Антоновна, выражаю большую благодарность врачам:<br>Косачеву Олегу Николаевичу, Невскому Денису Дмитриевичу и Косачеву Игорю Олеговичу.<br>За своевременную и качественную работу. Ощущение своих зубов, протез не ощущается.<br>Огромное спасибо, успехов и процветания!</p>
                               <p class="data text-right">09.10 2016г.</p>
-                              <div class="avatar icokiostom-comment"><img src="bitrix/templates/frontpage/images/review_avatar.jpg" alt="" class="img-circle"></div>
+                              <div class="avatar icokiostom-comment"><img src="bitrix/templates/front/images/review_avatar.jpg" alt="" class="img-circle"></div>
                             </blockquote>
                           </div>
                         </div>
@@ -408,32 +449,32 @@
               <div class="col-sm-6">
                 <div class="row">
                   <div class="col-xs-3">
-                    <div class="image-wrapper"><a href="bitrix/templates/frontpage/images/cert1.jpg" rel="cert" class="fancybox"><img src="bitrix/templates/frontpage/images/cert1.jpg" alt=""></a></div>
+                    <div class="image-wrapper"><a href="bitrix/templates/front/images/cert1.jpg" rel="cert" class="fancybox"><img src="bitrix/templates/front/images/cert1.jpg" alt=""></a></div>
                   </div>
                   <div class="col-xs-3">
-                    <div class="image-wrapper"><a href="bitrix/templates/frontpage/images/cert1.jpg" rel="cert" class="fancybox"><img src="bitrix/templates/frontpage/images/cert1.jpg" alt=""></a></div>
+                    <div class="image-wrapper"><a href="bitrix/templates/front/images/cert1.jpg" rel="cert" class="fancybox"><img src="bitrix/templates/front/images/cert1.jpg" alt=""></a></div>
                   </div>
                   <div class="col-xs-3">
-                    <div class="image-wrapper"><a href="bitrix/templates/frontpage/images/cert1.jpg" rel="cert" class="fancybox"><img src="bitrix/templates/frontpage/images/cert1.jpg" alt=""></a></div>
+                    <div class="image-wrapper"><a href="bitrix/templates/front/images/cert1.jpg" rel="cert" class="fancybox"><img src="bitrix/templates/front/images/cert1.jpg" alt=""></a></div>
                   </div>
                   <div class="col-xs-3">
-                    <div class="image-wrapper"><a href="bitrix/templates/frontpage/images/cert1.jpg" rel="cert" class="fancybox"><img src="bitrix/templates/frontpage/images/cert1.jpg" alt=""></a></div>
+                    <div class="image-wrapper"><a href="bitrix/templates/front/images/cert1.jpg" rel="cert" class="fancybox"><img src="bitrix/templates/front/images/cert1.jpg" alt=""></a></div>
                   </div>
                 </div>
               </div>
               <div class="col-sm-6">
                 <div class="row">
                   <div class="col-xs-3">
-                    <div class="image-wrapper"><a href="bitrix/templates/frontpage/images/cert1.jpg" rel="cert" class="fancybox"><img src="bitrix/templates/frontpage/images/cert1.jpg" alt=""></a></div>
+                    <div class="image-wrapper"><a href="bitrix/templates/front/images/cert1.jpg" rel="cert" class="fancybox"><img src="bitrix/templates/front/images/cert1.jpg" alt=""></a></div>
                   </div>
                   <div class="col-xs-3">
-                    <div class="image-wrapper"><a href="bitrix/templates/frontpage/images/cert1.jpg" rel="cert" class="fancybox"><img src="bitrix/templates/frontpage/images/cert1.jpg" alt=""></a></div>
+                    <div class="image-wrapper"><a href="bitrix/templates/front/images/cert1.jpg" rel="cert" class="fancybox"><img src="bitrix/templates/front/images/cert1.jpg" alt=""></a></div>
                   </div>
                   <div class="col-xs-3">
-                    <div class="image-wrapper"><a href="bitrix/templates/frontpage/images/cert1.jpg" rel="cert" class="fancybox"><img src="bitrix/templates/frontpage/images/cert1.jpg" alt=""></a></div>
+                    <div class="image-wrapper"><a href="bitrix/templates/front/images/cert1.jpg" rel="cert" class="fancybox"><img src="bitrix/templates/front/images/cert1.jpg" alt=""></a></div>
                   </div>
                   <div class="col-xs-3">
-                    <div class="image-wrapper"><a href="bitrix/templates/frontpage/images/cert1.jpg" rel="cert" class="fancybox"><img src="bitrix/templates/frontpage/images/cert1.jpg" alt=""></a></div>
+                    <div class="image-wrapper"><a href="bitrix/templates/front/images/cert1.jpg" rel="cert" class="fancybox"><img src="bitrix/templates/front/images/cert1.jpg" alt=""></a></div>
                   </div>
                 </div>
               </div>
@@ -457,7 +498,7 @@
         <div class="row footer_row">
           <div class="container">
             <div class="row">
-              <div class="col-md-3"><a href=""><img src="bitrix/templates/frontpage/images/kiostom_logo_white.png" alt="«КИОСТОМ»" class="logo"></a>
+              <div class="col-md-3"><a href=""><img src="bitrix/templates/front/images/kiostom_logo_white.png" alt="«КИОСТОМ»" class="logo"></a>
                 <div class="button_wrap row">
                   <div class="col-md-12 col-sm-6 col-xs-12 mail">
                     <button class="btn btn-white"><i class="icokiostom-email"></i>Записаться на приём</button>
@@ -516,9 +557,9 @@
             <div class="row">
               <div class="col-sm-6 col-sm-push-6 social pt-20 pb-20"><span>ПРИСОЕДИНЯЙТЕСЬ: </span>
                 <ul>
-                  <li><a href="javascript:;"><img src="bitrix/templates/frontpage/images/ic_01.jpg" alt=""></a></li>
-                  <li><a href="javascript:;"><img src="bitrix/templates/frontpage/images/ic_02.jpg" alt=""></a></li>
-                  <li><a href="javascript:;"><img src="bitrix/templates/frontpage/images/ic_03.jpg" alt=""></a></li>
+                  <li><a href="javascript:;"><img src="bitrix/templates/front/images/ic_01.jpg" alt=""></a></li>
+                  <li><a href="javascript:;"><img src="bitrix/templates/front/images/ic_02.jpg" alt=""></a></li>
+                  <li><a href="javascript:;"><img src="bitrix/templates/front/images/ic_03.jpg" alt=""></a></li>
                 </ul>
               </div>
               <div class="col-sm-6 col-sm-pull-6 copyright pt-20 pb-20"><span>© КИОСТОМ 2017</span></div>
@@ -528,6 +569,6 @@
       </footer>
     </div>
     <script type="text/javascript" src="//vk.com/js/api/openapi.js?146"></script>
-    <script type="text/javascript" src="bitrix/templates/frontpage/js/main.js"></script>
+    <script type="text/javascript" src="bitrix/templates/front/js/main.js"></script>
   </body>
 </html>

@@ -8,37 +8,96 @@
 			span Меню
 		menu
 			li
-				a.with-submenu(href="javascript:;")
-					span О клинике 
+				a.with-submenu(href='/o-klinike/')
+					span О клинике
 					i.icokiostom-down.hidden-xs
 				ul.submenu
 					li
-						a(href="javascript:;")
-							span Команда
+						a(href='/doctors/') Команда
 					li
-						a(href="javascript:;")
-							span Расписание
+						a(href='/schedule/') Расписание
 					li
-						a(href="javascript:;")
-							span Наши работы
+						a(href='/work/') Наши работы
 					li
-						a(href="javascript:;")
-							span Новости
+						a(href='/news/') Новости
 					li
-						a(href="javascript:;")
-							span Статьи
+						a(href='/stati-po-stomatologii/') Статьи
 					li
-						a(href="javascript:;")
-							span Акции
+						a(href='/action/') Акции
 					li
-						a(href="javascript:;")
-							span Органы исполнительной власти
+						a(href='/organy-ispolnitelnoy-vlasti/') Органы исполнительной власти
 					li
-						a(href="javascript:;")
-							span Отзывы
+						a(href='/reviews/') Отзывы
 					li
-						a(href="javascript:;")
-							span Privacy Policy
+						a(href='/privacy-policy/') Privacy Policy
 			li
-				a(href="javascript:;")
+				a.with-submenu(href='/doctors/')
+					span Команда
+					i.icokiostom-down.hidden-xs
+				ul.submenu
+					li
+						a(href='/schedule/') Расписание
+			li
+				a(href='/work/')
+					span Наши работы
+			li
+				a.with-submenu(href='/services/')
+					span Услуги
+					i.icokiostom-down.hidden-xs
+				ul.submenu
+					li
+						a(href='/services/protezirovanie/') протезирование
+					li
+						a(href='/services/implantation/') имплантация
+					li
+						a(href='/services/surgery/') хирургия
+					li
+						a(href='/services/lecheniye-zubov/') лечение
+					li
+						a(href='/services/whitening/') отбеливание
+			li
+				a.with-submenu(href='/services/protezirovanie/')
+					span Протезирование
+					i.icokiostom-down.hidden-xs
+				ul.submenu
+					li
+						a(href='/services/protezirovanie/viniry') Виниры
+					li
+						a(href='/services/protezirovanie/zubnye-koronki/') Коронки
+					li
+						a(href='/services/protezirovanie/zubnye-mosty/') Мостовидные протезы
+					li
+						a(href='/services/protezirovanie/zubnye-vkladki/') Вкладки
+					li
+						a(href='/services/protezirovanie/semnoe-protezirovanie') Съемное протезирование
+					li
+						a(href='/services/protezirovanie/byugelnoe-protezirovanie') Бюгельное протезирование
+					li
+						a(href='/services/protezirovanie/protezirovanie-na-implantatah/') Протезирование на имплантатах
+			li
+				a.with-submenu(href='/services/implantation/')
+					span Имплантация
+					i.icokiostom-down.hidden-xs
+				ul.submenu
+					li
+						a(href='/services/implantation/odnomomentnaya-implantaciya-zubov') Одномоментная имплантация зубов
+					li
+						a(href='/services/implantation/implantaciya-All-on-4') Имплантация All-on-4
+					li
+						a(href='/services/implantation/sistemy-implantacii') Системы имплантации
+					li
+						a(href='/services/implantation/narashhivanie-kostnoj-tkani/') Наращивание костной ткани
+			li
+				a.with-submenu(href='/price/')
+					span Цены
+					i.icokiostom-down.hidden-xs
+				ul.submenu
+					li
+						a(href='/ceni-na-lechenie-zubov/') Терапия
+					li
+						a(href='/ceni-na-implantaciu-i-hirurgiu/') Хирургия
+					li
+						a(href='/ceni-na-protezirovanie/') Ортопедия
+			li
+				a(href='/contacts/')
 					span Контакты

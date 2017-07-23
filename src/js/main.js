@@ -3,12 +3,12 @@
 	$('.mobile-menu').click(function(){
 		var $this = $(this),
 			$hm = $('header menu');
-        $this.hasClass('opened') ? ($this.removeClass('opened'), $hm.removeClass('opened')) : ($this.addClass('opened'), $hm.addClass('opened'));
-    });
+		$this.hasClass('opened') ? ($this.removeClass('opened'), $hm.removeClass('opened')) : ($this.addClass('opened'), $hm.addClass('opened'));
+	});
 
-    $('a.with-submenu').click(function(){
-        $(this).next('.submenu').toggleClass('opened');
-    });
+	$('a.with-submenu').click(function(){
+		$(this).next('.submenu').toggleClass('opened');
+	});
 }(jQuery);
 /* slider */
 !function($){
@@ -26,12 +26,12 @@
 	$arrowsNewsSlider.append($prevArrow).append($nextArrow);
 	$reviewArrows.append($prevRewArrow).append($nextRewArrow);
 	$slider.slick({
-        slide: '.slide',
-        infinite: true,
-        arrows: false,
-        dots: true,
-        cssEase: 'ease',
-        fade: false,
+		slide: '.slide',
+		infinite: true,
+		arrows: false,
+		dots: true,
+		cssEase: 'ease',
+		fade: false,
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		autoplay: true,
@@ -46,12 +46,12 @@
 				}
 			}
 		]
-    });
+	});
 	$newsSlider.slick({
-        slide: '.slider-item',
-        infinite: true,
-        arrows: true,
-        dots: true,
+		slide: '.slider-item',
+		infinite: true,
+		arrows: true,
+		dots: true,
 		slidesToShow: 3,
 		slidesToScroll: 3,
 		autoplay: false,
@@ -79,19 +79,19 @@
 		]
 	});
 	$reviewSlider.slick({
-        slide: '.slider-item',
-        infinite: true,
-        arrows: true,
-        dots: false,
-        cssEase: 'ease',
-        fade: false,
+		slide: '.slider-item',
+		infinite: true,
+		arrows: true,
+		dots: false,
+		cssEase: 'ease',
+		fade: false,
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		autoplay: false,
 		appendArrows: $reviewArrows,
 		prevArrow: $prevRewArrow,
 		nextArrow: $nextRewArrow,
-    });
+	});
 }(jQuery);
 /* slider */
 !function($){
@@ -135,10 +135,43 @@
 	}
 }(jQuery);
 !function($){
-	$('input[placeholder="+7(999)999-99-99"]').mask("+7(999)999-99-99");
-	$("[name=user_date]").datetimepicker({
-        lang:'ru',
-        minDate:0,
-        format:'j.m.Y h:i'
-    });
+	var initFormHeader = function(){
+		$('input[placeholder="+7(999)999-99-99"]').mask("+7(999)999-99-99");
+		$("[name=form_text_54]").datetimepicker({
+			lang:'ru',
+			minDate:0,
+			format:'j.m.Y h:i'
+		});
+		$.fancybox.update();
+	}
+	BX.addCustomEvent('onAjaxSuccess', initFormHeader);
+	if( $('.popup').length > 0)
+	{
+		$(".popup").fancybox({
+			type: 'ajax',
+			maxWidth: 700,
+			padding: 0
+		});
+
+		$('body').on('submit', '.fancybox-type-ajax .fancybox-inner form', function(e){
+			var inner = $('.fancybox-type-ajax .fancybox-inner')
+				submit = inner.find('[type="submit"]');
+
+			$(this).append('<input type="hidden" name="'+submit.attr('name')+'" value="'+submit.attr('value')+'" />');
+
+			$.ajax({
+				url: $(this).attr('action'),
+				type: $(this).attr('method'),
+				data: $(this).serialize(),
+				success: function (data)
+				{
+					inner.html(data);
+					$.fancybox.update();
+				}
+			});
+
+			e.preventDefault();
+		});
+	}
+	initFormHeader();
 }(jQuery);

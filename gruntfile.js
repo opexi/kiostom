@@ -13,7 +13,7 @@ module.exports = function(grunt){
 			dist: {
 				"crawl": false,
 				"customTests": [],
-				"dest": "docs/bitrix/templates/frontpage/js/modernizr.js",
+				"dest": "docs/bitrix/templates/front/js/modernizr.js",
 				"tests": [
 					"customelements",
 					"customevent",
@@ -75,7 +75,7 @@ module.exports = function(grunt){
 				src: [
 					'test/css/main.css'
 				],
-				dest: 'docs/bitrix/templates/frontpage/css/'
+				dest: 'docs/bitrix/templates/front/css/'
 			}
 		},
 		requirejs: {
@@ -115,7 +115,7 @@ module.exports = function(grunt){
 			},
 			main: {
 				files: {
-					'docs/bitrix/templates/frontpage/js/main.js': [
+					'docs/bitrix/templates/front/js/main.js': [
 						'src/js/df.js',
 						'src/js/main.js'
 					]
@@ -123,7 +123,7 @@ module.exports = function(grunt){
 			},
 			app: {
 				files: {
-					'docs/bitrix/templates/frontpage/js/app.js' : [
+					'docs/bitrix/templates/front/js/app.js' : [
 						'bower_components/jquery/dist/jquery.js',
 						'bower_components/bootstrap/dist/js/bootstrap.js',
 						//'test/js/jquery.custom-ui.js',
@@ -145,7 +145,7 @@ module.exports = function(grunt){
 			},
 			hypher: {
 				files: {
-					'docs/bitrix/templates/frontpage/js/hypher.js' : [
+					'docs/bitrix/templates/front/js/hypher.js' : [
 						'bower_components/hyphernationRUru/dist/jquery.hypher.js',
 						'bower_components/hyphernationRUru/dist/en-us.js',
 						'bower_components/hyphernationRUru/dist/ru-ru.js',
@@ -172,7 +172,7 @@ module.exports = function(grunt){
 						src: [
 							'src/images/*.{png,jpg,gif,svg}'
 						],
-						dest: 'docs/bitrix/templates/frontpage/images/',
+						dest: 'docs/bitrix/templates/front/images/',
 						filter: 'isFile'
 					}
 				]
@@ -240,19 +240,19 @@ module.exports = function(grunt){
 				expand: true,
 				cwd: 'src/fonts',
 				src: '**',
-				dest: 'docs/bitrix/templates/frontpage/fonts/',
+				dest: 'docs/bitrix/templates/front/fonts/',
 			},
 			bootstrap: {
 				expand: true,
 				cwd: 'bower_components/bootstrap/dist/fonts',
 				src: '**',
-				dest: 'docs/bitrix/templates/frontpage/fonts/',
+				dest: 'docs/bitrix/templates/front/fonts/',
 			},
 			slick: {
 				expand: true,
 				cwd: 'bower_components/slick-carousel/slick/fonts',
 				src: '**',
-				dest: 'docs/bitrix/templates/frontpage/fonts/',
+				dest: 'docs/bitrix/templates/front/fonts/',
 			},
 		},
 		clean: {
