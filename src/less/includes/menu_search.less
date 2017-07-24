@@ -1,0 +1,122 @@
+.menu {
+	&-search {
+		position: relative;
+		width: 44px;
+		height: 44px;
+		cursor: pointer;
+		form {
+			position: relative;
+		}
+		> [class^="icokiostom-"], 
+		> [class*=" icokiostom-"] {
+			color: #ccc;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			width: 44px;
+			height: 44px;
+			line-height: 44px;
+			background-color: #5b6b70;
+			@media(max-width: 767px) {
+				display: none;
+			}
+			&.opened {
+				color: #fff;
+				background-color: #444c4e;
+				+ .menu-search-block {
+					opacity: 1;
+					visibility: visible;
+					.menu-search-form {
+						right: 0%;
+					}
+				}
+				
+			}
+		}
+		&:hover, &:focus {
+			> [class^="icokiostom-"], 
+			> [class*=" icokiostom-"] {
+				color: #fff;
+				background-color: #444c4e;
+			}
+		}
+		&-block {
+			cursor: default;
+			position: absolute;
+			top: 100%;
+			white-space: nowrap;
+			line-height: 1.8;
+			opacity: 0;
+			visibility: hidden;
+			overflow: hidden;
+			transition: all .3s;
+			input, button {
+				display: inline-block;
+			}
+			@media(max-width: 767px) {
+				position: relative;
+				display: inline-block;
+				vertical-align: middle;
+				top: auto;
+				background-color: transparent;
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+		&-form {
+			position: relative;
+			padding: 5px;
+			background-color: #5b6b70;
+			right: 105%;
+			transition: all .3s;
+			[type=text] {
+				padding-left: 10px;
+				padding-right: 54px;
+				min-width: 240px;
+				color: #000;
+				border: 1px solid #ccc;
+				border-radius: 3px;
+				overflow: hidden;
+				+ [type=submit] {
+					position: absolute;
+					right: 0px;
+					top: 0px;
+					bottom: 0px;
+					background-color: transparent;
+					border: none;
+					overflow: hidden;
+					border-top-right-radius: 3px;
+					border-bottom-right-radius: 3px;
+					border-top: 1px solid #ccc;
+					border-right: 1px solid #ccc;
+					border-bottom: 1px solid #ccc;
+					&, [class^="icokiostom-"], [class*=" icokiostom-"] {
+						transition: all .3s;
+					}
+				}
+				&:focus {
+					outline: 0;
+					+ [type=submit] {
+						background-color: #ccc;
+						color: #fff;
+					}
+				}
+				&, &:focus {
+					+ [type=submit] {
+						&:hover {
+							background-color: #5b6b70;
+							color: #fff;
+						}
+					}
+				}
+			}
+			@media(max-width: 767px) {
+				right: auto !important;
+				background-color: transparent;
+			}
+		}
+		@media(max-width: 767px) {
+			width: auto;
+		}
+	}
+}

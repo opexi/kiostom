@@ -7,6 +7,13 @@
 				span.line
 			span Меню
 		menu
+			li.menu-search
+				i.icokiostom-search#menu-search
+				.menu-search-block
+					.menu-search-form
+						form(action="/" method="POST")
+							input(type="text" name="q" value="")
+							button(type="submit").icokiostom-search
 			li
 				a.with-submenu(href='/o-klinike/')
 					span О клинике

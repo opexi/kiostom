@@ -52,17 +52,17 @@ module.exports = function(grunt){
 			}
 		},
 		less: {
+			options : {
+				compress: gc.minifyCss,
+				ieCompat: false
+			},
 			css: {
 				files : {
 					'test/css/main.css' : [
 						'src/less/main.less',
 					]
-				},
-				options : {
-					compress: gc.minifyCss,
-					ieCompat: false
 				}
-			},
+			}
 		},
 		autoprefixer:{
 			options: {

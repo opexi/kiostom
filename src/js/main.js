@@ -9,6 +9,20 @@
 	$('a.with-submenu').click(function(){
 		$(this).next('.submenu').toggleClass('opened');
 	});
+	
+	$("#menu-search").on("click", function(e){
+		e.preventDefault();
+		var $this = $(this),
+			$input = $('input[name=q]', $this.parent());
+		$this.hasClass("opened") ? (
+			$this.removeClass("opened"),
+			setTimeout(function(){$input.blur()}, 500)
+		) : (
+			$this.addClass("opened"),
+			setTimeout(function(){$input.focus()}, 500)
+		);
+		return !1;
+	});
 }(jQuery);
 /* slider */
 !function($){
@@ -135,43 +149,45 @@
 	}
 }(jQuery);
 !function($){
-	var initFormHeader = function(){
-		$('input[placeholder="+7(999)999-99-99"]').mask("+7(999)999-99-99");
-		$("[name=form_text_54]").datetimepicker({
-			lang:'ru',
-			minDate:0,
-			format:'j.m.Y h:i'
-		});
-		$.fancybox.update();
-	}
-	BX.addCustomEvent('onAjaxSuccess', initFormHeader);
-	if( $('.popup').length > 0)
-	{
-		$(".popup").fancybox({
-			type: 'ajax',
-			maxWidth: 700,
-			padding: 0
-		});
-
-		$('body').on('submit', '.fancybox-type-ajax .fancybox-inner form', function(e){
-			var inner = $('.fancybox-type-ajax .fancybox-inner')
-				submit = inner.find('[type="submit"]');
-
-			$(this).append('<input type="hidden" name="'+submit.attr('name')+'" value="'+submit.attr('value')+'" />');
-
-			$.ajax({
-				url: $(this).attr('action'),
-				type: $(this).attr('method'),
-				data: $(this).serialize(),
-				success: function (data)
-				{
-					inner.html(data);
-					$.fancybox.update();
-				}
+	if(typeof BX == "function"){
+		var initFormHeader = function(){
+			$('input[placeholder="+7(999)999-99-99"]').mask("+7(999)999-99-99");
+			$("[name=form_text_54]").datetimepicker({
+				lang:'ru',
+				minDate:0,
+				format:'j.m.Y h:i'
+			});
+			$.fancybox.update();
+		}
+		BX.addCustomEvent('onAjaxSuccess', initFormHeader);
+		if( $('.popup').length > 0)
+		{
+			$(".popup").fancybox({
+				type: 'ajax',
+				maxWidth: 700,
+				padding: 0
 			});
 
-			e.preventDefault();
-		});
+			$('body').on('submit', '.fancybox-type-ajax .fancybox-inner form', function(e){
+				var inner = $('.fancybox-type-ajax .fancybox-inner')
+					submit = inner.find('[type="submit"]');
+
+				$(this).append('<input type="hidden" name="'+submit.attr('name')+'" value="'+submit.attr('value')+'" />');
+
+				$.ajax({
+					url: $(this).attr('action'),
+					type: $(this).attr('method'),
+					data: $(this).serialize(),
+					success: function (data)
+					{
+						inner.html(data);
+						$.fancybox.update();
+					}
+				});
+
+				e.preventDefault();
+			});
+		}
+		initFormHeader();
 	}
-	initFormHeader();
 }(jQuery);
