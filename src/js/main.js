@@ -39,6 +39,9 @@
 		$nextRewArrow = $nextArrow.clone();
 	$arrowsNewsSlider.append($prevArrow).append($nextArrow);
 	$reviewArrows.append($prevRewArrow).append($nextRewArrow);
+	console.log(
+	window.frontslider
+	);
 	$slider.slick({
 		slide: '.slide',
 		infinite: true,
@@ -48,7 +51,9 @@
 		fade: false,
 		slidesToShow: 1,
 		slidesToScroll: 1,
-		autoplay: true,
+		autoplay: window.frontslider.autoplay,
+		autoplaySpeed: window.frontslider.autoplaySpeed,
+		pauseOnHover: window.frontslider.pauseOnHover,
 		appendDots: $dotsWrapper,
 		responsive: [
 			{
